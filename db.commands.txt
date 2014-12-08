@@ -6,6 +6,10 @@ db.createUser({user: "hwclass", pwd: "123123", roles: [{ role: "read", db: "test
 
 $ curl -d '[{"firstname": "barack", "lastname": "obama"}, {"firstname": "mitt", "lastname": "romney"}]' -H 'Content-Type: application/json'  http://127.0.0.1:5000/people
 
+curl -i http://127.0.0.1:5000/people/obama
+
 $curl -d '[{"name": "Washington", "country": "USA"}]' -H 'Content-Type: application/json' http://127.0.0.1:5000/cities
 
-curl -i http://127.0.0.1:5000/people/obama
+curl -i http://127.0.0.1:5000/cities/
+
+curl -i http://127.0.0.1:5000/cities/Washington

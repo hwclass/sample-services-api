@@ -1,0 +1,5 @@
+use admin
+db.createUser({user: "hwclass", pwd: "123123", roles: [{role: "userAdminAnyDatabase", db: "admin"}]})
+
+use test
+db.createUser({user: "hwclass", pwd: "123123", roles: [{ role: "read", db: "test" }, { role: "write", db: "test" }, { role: "delete", db: "test" }]})
